@@ -22,7 +22,7 @@ char data[100] = {0};
 void loop() {
   switch(mode) {
     case 0:
-      RFCommunicatorSend("this is my text 123 555");
+      RFCommunicatorSend("Send message 1");
       mode = 1;
       break;
     case 1:
@@ -34,9 +34,9 @@ void loop() {
       mode = 2;
       break;
     case 2:
-    Serial.println("Second message sending ...");
-      RFCommunicatorSend("second message");
-      mode = 3;
+      RFCommunicatorSend("Send message 2");
+      delay(2000);
+      mode = 0;
       break;
   }
 
